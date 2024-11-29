@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Add New Blog</h2>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="title" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="description" required></textarea>
+  </mat-form-field>
+
+  <div>
+    <!-- File input to upload an image -->
+    <input
+      type="file"
+      accept="image/*"
+      (change)="onImageSelected($event)"
+      id="file-input"
+      hidden
+    />
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="triggerFileInput()"
+    >
+      Choose Image
+    </button>
+    <p *ngIf="selectedImage">Selected file: {{ image }}</p>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!title || !description || !selectedImage">
+    Add Blog
+  </button>
+</div>

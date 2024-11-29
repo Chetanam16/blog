@@ -1,0 +1,23 @@
+<div class="blogs-container">
+  <div *ngFor="let blog of paginatedBlogs()" class="blog-card-wrapper">
+    <mat-card class="blog-card">
+      <mat-card-header>
+        <mat-card-title>{{ blog.title }}</mat-card-title>
+        <mat-card-subtitle>{{ blog.description }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+
+        <img *ngIf="blog.image" [src]="blog.image" alt="Blog Image" class="blog-image" />
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+  
+  <!-- <mat-paginator
+    [length]="blogs().length"
+    [pageSize]="blogsPerPage"
+    (page)="changePage($event)"
+    aria-label="Select page">
+  </mat-paginator> -->
+  

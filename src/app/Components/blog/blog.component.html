@@ -1,0 +1,21 @@
+<div class="add-blog-button">
+  <button mat-raised-button color="accent" (click)="openAddBlogDialog()">
+    Add Blog
+  </button>
+</div>
+
+<div class="blog-list">
+  <mat-card *ngFor="let blog of blogs" class="blog-card">
+    <mat-card-header>
+      <mat-card-title>{{ blog.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="blog.image" alt="{{ blog.title }}" />
+    <mat-card-content>
+      <p>{{ blog.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="editBlog(blog)">Edit</button>
+      <button mat-button (click)="deleteBlog(blog)">Delete</button>
+      </mat-card-actions>
+  </mat-card>
+</div>

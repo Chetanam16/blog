@@ -1,0 +1,50 @@
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px; /* Fixed card width */
+  height: 400px; /* Fixed card height */
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.blogs-container {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next row if there's not enough space */
+  justify-content: center; /* Centers the content horizontally */
+  gap: 20px; /* Space between cards */
+}
+
+.blog-card mat-card-header {
+  height: 80px; /* Adjust the height for uniform headers */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.blog-card .blog-image {
+  width: 100%; /* Ensure image fills the card width */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Crop and center the image */
+  border-radius: 4px;
+}
+
+.blog-card mat-card-content {
+  flex-grow: 1; /* Ensure content takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.blog-card mat-card-content p {
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.blog-card mat-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px; /* Fixed footer height */
+}

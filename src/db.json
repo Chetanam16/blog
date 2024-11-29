@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user",
+      "password": "password",
+      "blogs": [
+        {
+          "title": "my moment",
+          "description": "happy hour",
+          "image": "/images/Capture.PNG",
+          "id": 1
+        },
+        {
+          "title": "react js",
+          "description": "react js library",
+          "image": "/images/react.png",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "chetana",
+      "password": "password",
+      "blogs": [
+        {
+          "title": "bootstrap 5",
+          "description": "newly added bootstrap 5 features",
+          "image": "/images/bootstrap1.jpg",
+          "id": 3
+        },
+        {
+          "title": "Angular 19",
+          "description": "Angular 19 features ",
+          "image": "/images/angular2.png",
+          "id": 5
+        }
+      ]
+    }
+  ]
+}
